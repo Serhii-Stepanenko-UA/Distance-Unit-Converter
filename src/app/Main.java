@@ -8,11 +8,17 @@ public class Main {
         System.out.println("Converter App.");
 
         double mi = 5;
+        double km = 8;
         double kms = convMlsToKms(mi);
-        System.out.println("Result is " + kms + " kilometers.");
+        double mls = convKmsToMls(km);
+        System.out.println("Result is " + kms + " kilometers and " + mls + " miles.");
     }
 
     private static double convMlsToKms(double mi) {
-        return mi / CONV_K;
+        return mi * CONV_K;
+    }
+
+    private static double convKmsToMls(double km) {
+        return km / CONV_K;
     }
 }
